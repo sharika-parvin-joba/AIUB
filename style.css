@@ -27,11 +27,11 @@ display: flex;
 }
 
 #home2{
-     padding-right: 30px;
+     /* padding-right: 30px; */
     
     padding-bottom: 30px;
     padding-top: 50px;
-    padding-left: 550px;
+    padding-left: 580px;
     position: fixed;
      
    
@@ -40,9 +40,12 @@ display: flex;
    /* text-align: right; */
     margin-right: 20px;
     font-size: 20px;
+   
 
 }
-
+ .navi{
+    background-color: none;
+ }
 #home2 a{
     /* display: inline-block; */
     margin-right: 15px;
@@ -73,11 +76,11 @@ display: flex;
 #logo{
     
     text-align: left;
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 180px;
     /* border-radius: 120px 100px 120px 100px; */
     /* border-radius: 50%; */
-    padding-left: 40px;
+    padding-left: 60px;
     padding-top: 20px;
     vertical-align: middle;
     /* background-color: rgb(40, 77, 141); */
@@ -144,16 +147,22 @@ display: flex;
 
    #course{
     display: flex;
+    justify-content: space-around;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
    }
 
    .programs{
 
     margin-right: 10px;
     background-color: rgb(221, 223, 224);
+    box-shadow: 10px 10px 10px rgb(85, 88, 88);
+    overflow-y: scroll;
+    height: 400px;
+    width: 600px;
    
 
    }
@@ -220,7 +229,7 @@ display: flex;
     padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 50px;
-    box-shadow: 10px 10px 10px lightblue;
+    box-shadow: 10px 10px 10px rgb(154, 212, 231);
     text-align: center;
    
     
@@ -268,11 +277,11 @@ display: flex;
 
      .images .image__overlay img{
 
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     padding-left: 40px;
     padding-top: 60px;
-    /* background-image: linear-gradient(rgba(10, 7, 8, 0.9),rgba(19, 16, 17, 0.9)); */
+    /* background-color: linear-gradient(rgba(10, 7, 8, 0.9),rgba(19, 16, 17, 0.9));  */
     
 
    }
@@ -298,8 +307,8 @@ display: flex;
    }
    .images:hover .image__overlay img{
 
-    /* background-image: linear-gradient(rgba(10, 7, 8, 0.9),rgba(19, 16, 17, 0.9)); */
-    filter: blur(2px);
+     /* background-image: linear-gradient(rgba(10, 7, 8, 0.9),rgba(19, 16, 17, 0.9));  */
+    filter: blur(3px);
    }
  
 
@@ -454,20 +463,131 @@ font-size: 25px;
    #section7 h2{
     text-align: center;
     font-size: 35px;
+    
    }
+
+  
 
 
 
   
 
 
-   #footer{
+   #footer div{
 
     background-color: rgb(7, 7, 31);
     text-align: center;
     color: white;
     height: 50px;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     font-size: 20px;
    }
+
+
+   
+
+
+
+
+   /*..................... MEDIA QUEARY................ */
+
+
+   @media screen and (max-width: 667px) {
+
+    #section1{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .classes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .classes img{
+        height: 350px;
+        width: 350px;
+    }
+
+    .faci-p{
+        overflow-y: scroll;
+        height: 210px;
+        width: 300px;
+        
+    }
+
+    .beauty-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    #reviews{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    #contacts{
+        display: grid;
+       
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: space-around;
+       
+    }
+
+
+    }
+
+
+
+    @media screen and (min-width: 667px) and (max-width:991px){
+
+
+        .beauty-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+        #reviews{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+        #contacts{
+            display: grid;
+           
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: space-around;
+           
+        }
+
+        .classes{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+       
+     
+        .faci-p{
+            overflow-y: scroll;
+            height: 350px;
+            width: 400px;
+            
+        } 
+
+        #nav{
+            padding-left: 200px;
+            
+        }
+
+    }
+
+   
